@@ -1,0 +1,24 @@
+# some more ls aliases
+alias ll='ls -lart'
+alias llh='ls-larth'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Grep alias
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# listen to cool radio station with mplayer
+alias siradio='mplayer http://listen.siradio.fm'
+
+# update all git repos in your repos dir
+alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do cd $r && git pull ; done; popd'
+
+# tmux alias
+alias ta='tmux a'
+
+# Vim stuff
+alias vi='vim'
+EDITOR="vim"
+export EDITOR
