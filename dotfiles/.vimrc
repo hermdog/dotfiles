@@ -26,3 +26,9 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 highlight NonText ctermfg=8 guifg=gray
 set clipboard=unnamed
 source ~/.vim/cyclecolor.vim
+
+" add powerline
+set rtp+=~/.local/lib/python3.6/site-packages/powerline/bindings/vim
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
