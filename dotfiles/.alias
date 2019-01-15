@@ -1,8 +1,6 @@
 # some more ls aliases
-alias ll='ls -lart'
-alias llh='ls-larth'
-alias la='ls -A'
-alias l='ls -CF'
+alias lla='ls -lart'
+alias llah='ls -larth'
 
 # Grep alias
 alias grep='grep --color=auto'
