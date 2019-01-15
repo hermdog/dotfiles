@@ -9,3 +9,5 @@
 [user]
 	name = Hermdog
 	email = hermdog@gmail.com
+[core]
+	editor = vim
