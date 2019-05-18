@@ -1,22 +1,30 @@
 # some more ls aliases
-alias lla='ls -lart'
-alias llah='ls -larth'
-
-# Grep alias
+alias vi='vim'
+alias ll='ls -lart'
+alias llh='ls-larth'
+alias la='ls -A'
+alias l='ls -CF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# listen to cool radio station with mplayer
+alias pe='cd /etc/puppet/environments/bhitchcoxlai/'
+alias pagent-test='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
+alias pagent-noop='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai --noop ;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
 alias siradio='mplayer http://listen.siradio.fm'
-
-# update all git repos in your repos dir
 alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do cd $r && git pull ; done; popd'
-
-# tmux alias
 alias ta='tmux a'
 
-# Vim stuff
-alias vi='vim'
+alias b-bounce-pacemaker='sudo service pacemaker stop && sudo service corosync stop && sudo service corosync start && sudo service pacemaker start'
+
+# SSH aliases
+alias bauth='ssh ssh.booking.com'
+alias bssh='ssh bhitchcoxlai.shell.booking.com'
+
+# Git Aliases
+alias gp='git pull'
+alias gcm='git commit'
+alias gnb='git checkout -b'
+
+
 EDITOR="vim"
 export EDITOR
