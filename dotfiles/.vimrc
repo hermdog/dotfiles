@@ -3,8 +3,8 @@
 " Some defaults to start off with
 " F2 = toggle line numbering
 " F3 = toggle showing invisible characters
-" F4 = previous color scheme
-" F5 = next color scheme
+" F8 = previous color scheme
+" F9 = next color scheme
 
 syntax on                       " Syntax highlighting
 set background=dark             " Terminal with a dark background
@@ -22,13 +22,12 @@ set numberwidth=3               " Line number width
 nmap <f2> :set number! number?<cr>
 " Set f3 to toggle showing invisible characters
 nmap <f3> :set list! list?<cr>
+" Set f4 to toggle paste mode
+nmap <f4> :set paste! paste?<cr>
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 highlight NonText ctermfg=8 guifg=gray
+" work around booking shit
+" let g:syntastic_puppet_validate_disable = 1
+" let g:syntastic_puppet_lint_disable = 1
 set clipboard=unnamed
 source ~/.vim/cyclecolor.vim
-
-" add powerline
-set rtp+=~/.local/lib/python3.6/site-packages/powerline/bindings/vim
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
