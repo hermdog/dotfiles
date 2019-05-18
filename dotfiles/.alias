@@ -17,8 +17,6 @@ alias ta='tmux a'
 alias b-bounce-pacemaker='sudo service pacemaker stop && sudo service corosync stop && sudo service corosync start && sudo service pacemaker start'
 
 # SSH aliases
-alias bauth='ssh ssh.booking.com'
-alias bssh='ssh bhitchcoxlai.shell.booking.com'
 
 # Git Aliases
 alias gp='git pull'
