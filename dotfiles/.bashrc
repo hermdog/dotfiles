@@ -34,5 +34,5 @@ if [[ "$(< /proc/sys/kernel/osrelease)" == *icrosoft ]]; then
   ## this is used to setup ssh-agent
   ## requires keychain installed
   /usr/bin/keychain -q --nogui $HOME/.ssh/github_key
-  source $HOME/.keychain/DESKTOP-V3LTH6F-sh
+  source $HOME/.keychain/`hostname`-sh
 fi
