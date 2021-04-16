@@ -7,7 +7,9 @@
 [push]
     default = upstream
 [user]
-	name = Hermdog
-	email = hermdog@gmail.com
+	name = bhitchcox-lain
+	email = bhitchcox-lain@clearwateranalytics.com
 [core]
 	editor = vim
+[credential]
+	helper = store

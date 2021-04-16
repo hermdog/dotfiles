@@ -11,7 +11,7 @@ alias pe='cd /etc/puppet/environments/bhitchcoxlai/'
 alias pagent-test='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
 alias pagent-noop='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai --noop ;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
 alias siradio='mplayer http://listen.siradio.fm'
-alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do cd $r && git pull ; done; popd'
+alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do echo $r && cd $r && git pull ; done; popd'
 alias ta='tmux a'
 
 alias b-bounce-pacemaker='sudo service pacemaker stop && sudo service corosync stop && sudo service corosync start && sudo service pacemaker start'
