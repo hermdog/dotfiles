@@ -28,11 +28,11 @@ else
 fi
 
 # What todo if running on WSL
-if [[ "$(< /proc/sys/kernel/osrelease)" == *icrosoft ]]; then
+if [[ "$(< /proc/sys/kernel/osrelease)" == *icrosoft* ]]; then
   export PATH="~/.local/bin:$PATH"
 
   ## this is used to setup ssh-agent
   ## requires keychain installed
   /usr/bin/keychain -q --nogui $HOME/.ssh/github_key
-  source $HOME/.keychain/`hostname`-sh
+  source $HOME/.keychain/$HOSTNAME-sh
 fi
