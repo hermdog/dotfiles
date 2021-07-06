@@ -13,12 +13,6 @@ fi
 # User specific aliases and functions
 export PATH=~/bin:$PATH:/sbin:/usr/sbin
 
-# This is added for for use with tmux
-if [[ $HOSTNAME == "shell-"* ]]
-then
-  export ISSHELL="isshell"
-fi
-
 # My Fancy PS1 defined here.
 if [ $(id -u) -eq 0 ]
 then
