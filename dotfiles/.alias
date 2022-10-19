@@ -10,8 +10,6 @@ alias egrep='egrep --color=auto'
 alias pagent-test='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
 alias pagent-noop='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai --noop ;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
 alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do echo $r && cd $r && git pull ; done; popd'
-alias ta='tmux a'
-alias fixssh="eval $(tmux show-env -s |grep '^SSH_')"
 
 # SSH aliases
 
@@ -20,6 +18,10 @@ alias gp='git pull'
 alias gcm='git commit'
 alias gnb='git checkout -b'
 
+# tmux Aliases
+alias mux='tmuxinator'
+alias ta='tmux a'
+alias fixssh="eval $(tmux show-env -s |grep '^SSH_')"
 
 EDITOR="vim"
 export EDITOR
