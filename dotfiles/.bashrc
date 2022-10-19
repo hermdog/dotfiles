@@ -1,5 +1,10 @@
 # .bashrc
 
+# set ssh to use a custom location
+if [ ! -S ~/.ssh/ssh_auth_sock ] && [ -S "$SSH_AUTH_SOCK" ]; then
+        ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -11,7 +16,7 @@ if [ -f ~/.alias ]; then
 fi
 
 # User specific aliases and functions
-export PATH=~/bin:$PATH:/sbin:/usr/sbin
+export PATH=~/bin:$PATH:/sbin:/usr/sbin:/var/adm/scripts
 
 # My Fancy PS1 defined here.
 if [ $(id -u) -eq 0 ]
@@ -30,3 +35,10 @@ if [[ "$(< /proc/sys/kernel/osrelease)" == *icrosoft* ]]; then
   /usr/bin/keychain -q --nogui $HOME/.ssh/github_key
   source $HOME/.keychain/$HOSTNAME-sh
 fi
+
+if [ -f ~/.flc_specific ]; then 
+    . ~/.flc_specific
+fi
+
+export puppet6_dir='/home/bennetth/repos/puppet6'
+export CVSROOT=:ext:bennetth@cvs.flyingcroc.net:/usr/local/cvsroot
