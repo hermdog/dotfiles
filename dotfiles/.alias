@@ -21,7 +21,7 @@ alias gnb='git checkout -b'
 # tmux Aliases
 alias mux='tmuxinator'
 alias ta='tmux a'
-alias fixssh="eval $(tmux show-env -s |grep '^SSH_')"
+#alias fixssh="eval $(tmux show-env -s |grep '^SSH_')"
 
 EDITOR="vim"
 export EDITOR
