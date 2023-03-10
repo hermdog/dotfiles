@@ -1,27 +1,37 @@
 # some more ls aliases
-alias vi='vim'
 alias ll='ls -lart'
 alias llh='ls-larth'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Grep Aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias pagent-test='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
-alias pagent-noop='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai --noop ;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
+
+# Vim Aliases
+alias vi='vim'
+
+# Navigation Aliases
+alias cdp6='cd ~/repos/puppet6'
+alias cdp3='cd ~/repos/puppet3'
+alias cddns='cd ~/repos/dns'
+
+# puppet Commands
+#alias pagent-test='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
+#alias pagent-noop='sudo puppet agent --enable ;sudo puppet agent -t --environment bhitchcoxlai --noop ;sudo puppet agent --disable "bhitchcoxlai locked for testing on `date`" '
+
+# Repository Aliases
 alias pullall='pushd . ;for r in `find ~/repos/ -mindepth 1 -maxdepth 1 -type d`;do echo $r && cd $r && git pull ; done; popd'
 
-# SSH aliases
-
 # Git Aliases
-alias gp='git pull'
+alias gp='git pull --rebase'
 alias gcm='git commit'
 alias gnb='git checkout -b'
 
 # tmux Aliases
 alias mux='tmuxinator'
 alias ta='tmux a'
-#alias fixssh="eval $(tmux show-env -s |grep '^SSH_')"
 
 EDITOR="vim"
 export EDITOR
