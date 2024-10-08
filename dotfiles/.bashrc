@@ -48,4 +48,3 @@ if [ -f ~/.flc_specific ]; then
 fi
 
 export puppet6_dir='/home/bennetth/repos/puppet6'
-export CVSROOT=:ext:bennetth@cvs.flyingcroc.net:/usr/local/cvsroot
