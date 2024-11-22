@@ -7,7 +7,8 @@
 [push]
     default = upstream
 [user]
-	name = bennetth
+	name = hermdog
+	email = hermdog@gmail.com
 [core]
 	editor = vim
 [credential]
